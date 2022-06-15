@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <title>BOOKSTORE</title>
+</head>
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">BOOKSTORE</a>
+        </div>
+    </div>
+</nav>
+
+<div class="jumbotron">
+    <div class="container">
+        <h1>Welcome to our bookstore!</h1>
+        <p>Its best place to get your favourite books!</p>
+        <p><a class="btn btn-primary btn-lg" href="#" role="button">Go Shopping &raquo;</a></p>
+    </div>
+</div>
+
+<div class="container">
+    <!-- Example row of columns -->
+    <div class="row">
+
+
+        <div class="col-md-3">
+            <h2>Books</h2>
+            <p>Find the book you're looking for.
+            <ul>
+                <li><a href="#" th:href="@{'/book/list'}" style="margin-right: 5px;">List</a>with your future books</li>
+                <li><a href="#" th:href="@{'/book/new'}" style="margin-right: 5px;">Add new</a>book</li>
+            </ul>
+            <p><a class="btn btn-default" href="#" role="button" th:href="@{'/books/'}" >All Books &raquo;</a></p>
+        </div>
+
+
+        <div class="col-md-3">
+            <h2>Authors</h2>
+            <p>See authors of your beloved books! </p>
+            <ul>
+                <li><a href="#" th:href="@{'/author/list'}" style="margin-right: 5px;">List</a>of authors that wrote your books</li>
+                <li><a href="#" th:href="@{'/author/new'}" style="margin-right: 5px;">Add new</a>author</li>
+            </ul>
+            <p><a class="btn btn-default" href="#" role="button" th:href="@{'/authors/'}" >All Authors &raquo;</a></p>
+        </div>
+
+        <div class="col-md-3">
+            <h2>Publishing Houses</h2>
+            <p>Companies that made books you read!</p>
+            <ul>
+                <li><a href="#" th:href="@{'/publishinghouse/list'}" style="margin-right: 5px;">List</a>of all publishing houses you read</li>
+                <li><a href="#" th:href="@{'/publishinghouse/new'}" style="margin-right: 5px;">Add new</a>publishing house</li>
+            </ul>
+
+            <p><a class="btn btn-default" href="#" role="button" th:href="@{'/publishinghouses/'}" >All Publishing Houses &raquo;</a></p>
+        </div>
+
+
+        <div class="col-md-3">
+            <h2>Details</h2>
+            <p>Integrations to go!</p>
+            <ul>
+                <li><a href="#" th:href="@{'/detail/list'}" style="margin-right: 5px;">Details</a> of your books</li>
+                <li><a href="#" th:href="@{'/detail/new'}" style="margin-right: 5px;">Add</a>more details</li>
+            </ul>
+            <p><a class="btn btn-default" href="#" role="button" th:href="@{'/details'}" >All details &raquo;</a></p>
+        </div>
+    </div>
+
+
+</div> <!-- /container -->
+</body>
+</html>
